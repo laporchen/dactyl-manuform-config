@@ -47,13 +47,13 @@
             //                                         |  raise  |    ~    |   gui   |  lower  |
 
             bindings = <
- &bt BT_SEL 0        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9    &kp F10    &kp F11
-   &bt BT_NXT      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS   &kp PLUS    &kp F12
-   &bt BT_PRV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS   &kp PIPE
-   &bt BT_CLR  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN   &kp FSLH  &kp UNDER
+ &bt BT_SEL 0        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9       &kp F10    &kp F11
+   &bt BT_NXT      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS      &kp PLUS    &kp F12
+   &bt BT_PRV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS   &kp PIPE
+   &bt BT_CLR  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION  &kp UNDER
                                     &none        &trans                                                                                             &none              &none
-                                                                &none         &none                              &none            &mo 3
-                                                                              &none   &none  &kp EQUAL       &kp UNDER
+                                                                &none         &none                          &kp EQUAL            &mo 3
+                                                                              &none   &none  &kp TILDE       &kp UNDER
                                                                         &bootloader   &none   &kp PIPE       &kp TILDE
             >;
         };
@@ -71,14 +71,14 @@
             //                                         |  raise  |    ~    |   gui   |  lower  |
 
             bindings = <
- &kp GRAVE        &kp F1      &kp F2    &kp F3      &kp F4        &kp F5                       &kp F6     &kp F7    &kp F8    &kp F9       &kp F10  &kp F11
-     &none         &none  &kp K_PREV  &kp K_PP  &kp K_NEXT  &kp C_VOL_UP                        &none      &none     &none     &none         &none  &kp F12
-     &none  &kp QUESTION    &kp PIPE  &kp PLUS   &kp EQUAL  &kp C_VOL_DN                        &none   &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT    &none
-     &none         &none       &none     &none       &none    &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
-                               &none     &none                                                                       &none     &none
-                                                     &none         &none                        &none      &none
-                                                                   &none   &none   &none        &none
-                                                                   &none   &none   &none  &bootloader
+ &kp GRAVE     &kp F1      &kp F2         &kp F3      &kp F4        &kp F5                       &kp F6     &kp F7    &kp F8    &kp F9       &kp F10  &kp F11
+     &none      &none  &kp K_PREV       &kp K_PP  &kp K_NEXT  &kp C_VOL_UP                        &none      &none     &none     &none         &none  &kp F12
+     &none  &kp COLON    &kp PIPE  &kp AMPERSAND   &kp TILDE  &kp C_VOL_DN                        &none   &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT    &none
+     &none      &none       &none          &none       &none    &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
+                            &none          &none                                                                       &none     &none
+                                                       &none         &none                        &none      &none
+                                                                     &none   &none   &none        &none
+                                                                     &none   &none   &none  &bootloader
             >;
         };
 
