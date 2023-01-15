@@ -47,14 +47,14 @@
             //                                         |  raise  |    ~    |   gui   |  lower  |
 
             bindings = <
- &bt BT_SEL 0        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9       &kp F10    &kp F11
-   &bt BT_NXT      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS      &kp PLUS    &kp F12
-   &bt BT_PRV  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS   &kp PIPE
-   &bt BT_CLR  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION  &kp UNDER
-                                    &none        &trans                                                                                             &none              &none
-                                                                &none         &none                          &kp EQUAL            &mo 3
-                                                                              &none   &none  &kp TILDE       &kp UNDER
-                                                                        &bootloader   &none   &kp PIPE       &kp TILDE
+     &kp GRAVE        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9       &kp F10            &kp F11
+     &kp TILDE      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS      &kp PLUS            &kp F12
+ &kp BACKSPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &kp DOUBLE_QUOTES
+         &none  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION          &kp UNDER
+                                     &none         &none                                                                                          &kp PIPE          &kp COLON
+                                                                 &none         &none                          &kp EQUAL            &mo 3
+                                                                               &none   &none  &kp TILDE       &kp UNDER
+                                                                         &bootloader   &none   &kp PIPE       &kp TILDE
             >;
         };
 
@@ -84,14 +84,14 @@
 
         DOUBLE {
             bindings = <
-  &none   &none   &none   &none   &none   &none                              &none      &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                  &kp DOUBLE_QUOTES   &kp APOS   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                          &kp EQUAL  &kp COLON   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                          &kp TILDE  &kp QMARK   &none   &none   &none   &none
-                  &none   &none                                                                 &none   &none
-                                  &none   &none                              &none      &none
-                                          &none   &none   &none              &none
-                                          &none   &none   &none              &none
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &none   &none   &none                              &none      &none   &none   &none   &none   &none
+   &bt BT_NXT         &none         &none   &none   &none   &none                  &kp DOUBLE_QUOTES   &kp APOS   &none   &none   &none   &none
+   &bt BT_PRV         &none         &none   &none   &none   &none                          &kp EQUAL  &kp COLON   &none   &none   &none   &none
+   &bt BT_CLR         &none         &none   &none   &none   &none                          &kp TILDE  &kp QMARK   &none   &none   &none   &none
+                                    &none   &none                                                                 &none   &none
+                                                    &none   &none                              &none      &none
+                                                            &none   &none   &none              &none
+                                                            &none   &none   &none              &none
             >;
         };
     };
