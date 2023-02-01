@@ -6,11 +6,6 @@
 #define RAISE   1
 #define LOWER   2
 
-&sk {
-    release-after-ms = <100>;
-    quick-release;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
