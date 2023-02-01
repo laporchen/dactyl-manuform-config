@@ -6,15 +6,6 @@
 #define RAISE   1
 #define LOWER   2
 
-<<<<<<< HEAD
-=======
-&sk {
-    release-after-ms = <200>;
-    quick-release;
-    /delete-property/ ignore-modifiers;
-};
-
->>>>>>> parent of 1561f98 (Somehow it isn't working as intended.)
 / {
     keymap {
         compatible = "zmk,keymap";
