@@ -7,9 +7,8 @@
 #define LOWER   2
 
 &sk {
-    release-after-ms = <200>;
+    release-after-ms = <100>;
     quick-release;
-    /delete-property/ ignore-modifiers;
 };
 
 / {
