@@ -7,7 +7,7 @@
 #define LOWER   2
 
 &sk {
-    release-after-ms = <200>;
+    release-after-ms = <300>;
     quick-release;
     ignore-modifiers;
 };
