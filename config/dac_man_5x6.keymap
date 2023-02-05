@@ -100,17 +100,5 @@
                                                             &none   &none   &none              &none
             >;
         };
-        QUICK {
-            bindings = <
- &mt   &mt   &mt   &mt   &mt   &mt                              &mt      &mt   &mt   &mt   &mt   &mt
-   &mt APOS APOS        &mt         &mt   &mt   &mt   &mt                  &mt APOS APOS    &mt APOS  APOS   &mt   &mt   &mt   &mt
-   &mt APOS APOS        &mt         &mt   &mt   &mt   &mt                          &mt APOS APOS   &mt APOS  COLON   &mt   &mt   &mt   &mt
-   &mt APOS APOS        &mt         &mt   &mt   &mt   &mt                          &mt APOS APOS   &mt APOS  QMARK   &mt   &mt   &mt   &mt
-                                    &mt   &mt                                                                 &mt   &mt
-                                                    &mt   &mt                              &mt      &mt
-                                                            &mt   &mt   &mt              &mt
-                                                            &mt   &mt   &mt              &mt
-            >;
-        };
     };
 };
