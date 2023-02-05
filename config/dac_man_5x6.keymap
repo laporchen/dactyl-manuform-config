@@ -22,7 +22,9 @@
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             global-quick-tap;
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -34,7 +36,6 @@
                 <&kp TILDE>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -126,14 +127,14 @@
 
         QUICK {
             bindings = <
- &qk F1    ESC         &qk F2  N1         &qk F3 N2           &qk F4   N3      &qk F5     N4    &qk F6      N5                               &qk F7    N6       &qk F8        N7   &qk F9       N8     &qk F10   N9          &qk F11 N0                    &qk F12 PRINTSCREEN
- &qk TILDE GRAVE       &qk EXCL Q         &qk AT W            &qk HASH E       &qk DOLLAR R     &qk PERCENT T                                &qk CARET Y        &qk AMPERSAND U    &qk ASTERISK I      &qk MINUS O           &qk P  PLUS                   &sk BSLH 
- &kp TAB               &qk LEFT_SHIFT A   &qk LEFT_GUI S      &qk LEFT_ALT D   &qk LCTRL F      &qk PLUS G                                   &qk LPAR       H   &qk RPAR        J  &qk LEFT_BRACKET K  &qk RIGHT_BRACKET L   &qk COLON SEMICOLON           &qk DOUBLE_QUOTES SQT 
- &sk LCTRL             &qk LEFT_SHIFT Z   &qk LEFT_GUI X      &qk LEFT_ALT C   &qk LCTRL V      &qk MINUS B                                  &qk LEFT_BRACE N   &qk RIGHT_BRACE M  &qk LESS_THAN COMMA &qk GREATER_THAN DOT  &qk FSLH QUESTION             &qk PIPE UNDER
-                                          &sk LEFT_GUI        &sk LCTRL                                                                                                             &sk RCTRL  &kp RIGHT_SHIFT
-                                                                               &sk LEFT_SHIFT   &kp SPACE                                    &kp ENTER          &kp BACKSPACE
-                                                                                                &none   &none                                &none              &none
-                                                                                                &tog 4  &none                                &none              &none
+      &qk F1 ESC         &qk F2 N1       &qk F3 N2       &qk F4 N3       &qk F5 N4      &qk F6 N5                         &qk F7 N6          &qk F8 N7            &qk F9 N8            &qk F10 N9           &qk F11 N0    &qk F12 PRINTSCREEN
+ &qk TILDE GRAVE        &qk EXCL Q        &qk AT W      &qk HASH E    &qk DOLLAR R  &qk PERCENT T                       &qk CARET Y    &qk AMPERSAND U       &qk ASTERISK I           &qk MINUS O           &qk PLUS P               &sk BSLH
+         &kp TAB  &qk LEFT_SHIFT A  &qk LEFT_GUI S  &qk LEFT_ALT D     &qk LCTRL F     &qk PLUS G                        &qk LPAR H         &qk RPAR J   &qk LEFT_BRACKET K   &qk RIGHT_BRACKET L  &qk COLON SEMICOLON  &qk DOUBLE_QUOTES SQT
+       &sk LCTRL  &qk LEFT_SHIFT Z  &qk LEFT_GUI X  &qk LEFT_ALT C     &qk LCTRL V    &qk MINUS B                  &qk LEFT_BRACE N  &qk RIGHT_BRACE M  &qk LESS_THAN COMMA  &qk GREATER_THAN DOT   &qk QUESTION SLASH         &qk PIPE UNDER
+                                      &sk LEFT_GUI       &sk LCTRL                                                                                                &sk RCTRL       &kp RIGHT_SHIFT
+                                                                    &sk LEFT_SHIFT      &kp SPACE                         &kp ENTER    &lt 2 BACKSPACE
+                                                                                            &none   &none   &none             &none
+                                                                                           &tog 4   &none   &none             &none
             >;
         };
     };
