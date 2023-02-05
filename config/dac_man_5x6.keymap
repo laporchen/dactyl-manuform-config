@@ -14,7 +14,7 @@
 
 / {
     behaviors {
-        qk: hold_tap {
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "hold_tap";
             #binding-cells = <2>;
@@ -125,11 +125,11 @@
 
         QUICK {
             bindings = <
- &qk F1    ESC         &qk F2  N1         &qk F3 N2           &qk F4   N3      &qk F5     N4    &qk F6      N5                               &qk F7    N6       &qk F8        N7   &qk F9       N8     &qk F10   N9          &qk N0 F11                    &qk F12 PRINTSCREEN
- &qk TILDE GRAVE       &qk EXCL Q         &qk AT W            &qk HASH E       &qk DOLLAR R     &qk PERCENT T                                &qk CARET Y        &qk AMPERSAND U    &qk ASTERISK I      &qk MINUS O           &qk P  PLUS                   &sk BSLH 
- &kp TAB               &qk LEFT_SHIFT A   &qk LEFT_GUI S      &qk LEFT_ALT D   &qk LCTRL F      &qk G                                        &qk LPAR       H   &qk RPAR        J  &qk LEFT_BRACKET K  &qk RIGHT_BRACKET L   &qk COLON SEMICOLON           &qk DOUBLE_QUOTES SQT 
- &sk LCTRL             &qk LEFT_SHIFT Z   &qk LEFT_GUI X      &qk LEFT_ALT C   &qk LCTRL V      &qk B                                        &qk LEFT_BRACE N   &qk RIGHT_BRACE M  &qk LESS_THAN COMMA &qk GREATER_THAN DOT  &qk FSLH QUESTION             &qk PIPE UNDER
-                                          &sk LEFT_GUI        &sk LCTRL                                                                                                             &sk RCTRL  &qk RIGHT_SHIFT
+ &ht F1    ESC         &ht F2  N1         &ht F3 N2           &ht F4   N3      &ht F5     N4    &ht F6      N5                               &ht F7    N6       &ht F8        N7   &ht F9       N8     &ht F10   N9          &ht N0 F11                    &ht F12 PRINTSCREEN
+ &ht TILDE GRAVE       &ht EXCL Q         &ht AT W            &ht HASH E       &ht DOLLAR R     &ht PERCENT T                                &ht CARET Y        &ht AMPERSAND U    &ht ASTERISK I      &ht MINUS O           &ht P  PLUS                   &sk BSLH 
+ &kp TAB               &ht LEFT_SHIFT A   &ht LEFT_GUI S      &ht LEFT_ALT D   &ht LCTRL F      &ht G                                        &ht LPAR       H   &ht RPAR        J  &ht LEFT_BRACKET K  &ht RIGHT_BRACKET L   &ht COLON SEMICOLON           &ht DOUBLE_QUOTES SQT 
+ &sk LCTRL             &ht LEFT_SHIFT Z   &ht LEFT_GUI X      &ht LEFT_ALT C   &ht LCTRL V      &ht B                                        &ht LEFT_BRACE N   &ht RIGHT_BRACE M  &ht LESS_THAN COMMA &ht GREATER_THAN DOT  &ht FSLH QUESTION             &ht PIPE UNDER
+                                          &sk LEFT_GUI        &sk LCTRL                                                                                                             &sk RCTRL  &ht RIGHT_SHIFT
                                                                                &sk LEFT_SHIFT   &kp SPACE                                    &kp ENTER          &kp BACKSPACE
                                                                                                 &none   &none                                &none              &none
                                                                                                 &tog 4  &none                                &none              &none
