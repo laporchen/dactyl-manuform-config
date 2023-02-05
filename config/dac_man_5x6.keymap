@@ -14,15 +14,6 @@
 
 / {
     behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings =
-                <&kp GRAVE>,
-                <&kp TILDE>;
-        };
         qk: quick_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
@@ -34,14 +25,6 @@
         };
     };
 
-    macros {
-        stickyShift: stickyShift {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
