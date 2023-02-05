@@ -21,6 +21,7 @@
             tapping-term-ms = <100>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
         td0: tap_dance_0 {
