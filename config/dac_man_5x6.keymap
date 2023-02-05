@@ -26,7 +26,7 @@
         qk: quick_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
