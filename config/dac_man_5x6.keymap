@@ -141,7 +141,7 @@
                                                                                &sk LEFT_SHIFT   &kp SPACE                                    &kp ENTER          &kp BACKSPACE
                                                                                                 &none   &none                                &none              &none
                                                                                                 &tog 4  &none                                &none              &none
-            >
+            >;
         };
     };
 };
