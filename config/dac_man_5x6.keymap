@@ -7,12 +7,22 @@
 #define LOWER   2
 
 &sk {
-    release-after-ms = <300>;
+    release-after-ms = <350>;
     quick-release;
     ignore-modifiers;
 };
 
 / {
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -30,7 +40,7 @@
 
             bindings = <
    &kp ESC  &kp N1        &kp N2     &kp N3  &kp N4        &kp N5                                         &kp N6  &kp N7     &kp N8           &kp N9         &kp N0  &kp PRINTSCREEN
- &kp GRAVE   &kp Q         &kp W      &kp E   &kp R         &kp T                                          &kp Y   &kp U      &kp I            &kp O          &kp P         &kp BSLH
+ &td0   &kp Q         &kp W      &kp E   &kp R         &kp T                                          &kp Y   &kp U      &kp I            &kp O          &kp P         &kp BSLH
    &kp TAB   &kp A         &kp S      &kp D   &kp F         &kp G                                          &kp H   &kp J      &kp K            &kp L  &kp SEMICOLON          &kp SQT
  &kp LCTRL   &kp Z         &kp X      &kp C   &kp V         &kp B                                          &kp N   &kp M  &kp COMMA          &kp DOT       &kp FSLH        &kp MINUS
                     &sk LEFT_GUI  &sk LCTRL                                                                               &sk RCTRL  &kp RIGHT_SHIFT
