@@ -14,7 +14,7 @@
 
 / {
     behaviors {
-        qk: quick_layer {
+        qk {
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
             #binding-cells = <2>;
