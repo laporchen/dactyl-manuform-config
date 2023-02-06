@@ -4,7 +4,9 @@
 
 #define DEFAULT 0
 #define RAISE   1
-#define LOWER   2
+#define LOWER   3
+#define QUICK   2
+#define DOUBLE  4
 
 &sk {
     release-after-ms = <350>;
@@ -41,16 +43,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // Commented layout is not actual layout.
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |   ESC   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  BSPC   |
-            // |   TAB   |    Q    |    W    |    E    |    R    |    T    |                   |    Y    |    U    |    I    |    O    |    P    |    \    |
-            // |  LALT   |    A    |    S    |    D    |    F    |    G    |                   |    H    |    J    |    K    |    L    |    ;    |    '    |
-            // |  LCTRL  |    Z    |    X    |    C    |    V    |    B    |                   |    N    |    M    |    ,    |    .    |    /    |  RALT   |
-            //                     |    [    |    ]    |                                                           |    -    |    =    |
-            //                               | MO lay 1| SPACE   |                   | ENTER   | MO lay 2|
-            //                                         |   TAB   |   HOME  |   END   |   DEL   |
-            //                                         |  Raise  |    ~    |   GUI   |  Lower  |
 
             bindings = <
    &kp ESC  &kp N1        &kp N2     &kp N3  &kp N4        &kp N5                                         &kp N6           &kp N7     &kp N8           &kp N9         &kp N0  &kp PRINTSCREEN
@@ -65,90 +57,59 @@
         };
 
         raise {
-            // commented layout is not actual layout.
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |   esc   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  bspc   |
-            // |   tab   |    q    |    w    |    e    |    r    |    t    |                   |    y    |    u    |    i    |    o    |    p    |    \    |
-            // |  lalt   |    a    |    s    |    d    |    f    |    g    |                   |    h    |    j    |    k    |    l    |    ;    |    '    |
-            // |  lctrl  |    z    |    x    |    c    |    v    |    b    |                   |    n    |    m    |    ,    |    .    |    /    |  ralt   |
-            //                     |    [    |    ]    |                                                           |    -    |    =    |
-            //                               | mo lay 1| space   |                   | enter   | mo lay 2|
-            //                                         |   tab   |   home  |   end   |   del   |
-            //                                         |  raise  |    ~    |   gui   |  lower  |
 
             bindings = <
      &kp GRAVE        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9       &kp F10            &kp F11
      &kp TILDE      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS      &kp PLUS            &kp F12
  &kp BACKSPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &kp DOUBLE_QUOTES
-         &none  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION          &kp UNDER
+         &tog QUICK  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION          &kp UNDER
                                     &trans        &trans                                                                                          &kp PIPE          &kp COLON
-                                                                 &none         &none                          &kp EQUAL            &mo 3
+                                                                 &none         &none                          &kp EQUAL            &mo DOUBLE
                                                                                &none   &none  &kp TILDE       &kp UNDER
                                                                          &bootloader   &none   &kp PIPE       &kp TILDE
             >;
         };
-
-        lower {
-            // commented layout is not actual layout.
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |   esc   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  bspc   |
-            // |   tab   |    q    |    w    |    e    |    r    |    t    |                   |    y    |    u    |    i    |    o    |    p    |    \    |
-            // |  lalt   |    a    |    s    |    d    |    f    |    g    |                   |    h    |    j    |    k    |    l    |    ;    |    '    |
-            // |  lctrl  |    z    |    x    |    c    |    v    |    b    |                   |    n    |    m    |    ,    |    .    |    /    |  ralt   |
-            //                     |    [    |    ]    |                                                           |    -    |    =    |
-            //                               | mo lay 1| space   |                   | enter   | mo lay 2|
-            //                                         |   tab   |   home  |   end   |   del   |
-            //                                         |  raise  |    ~    |   gui   |  lower  |
-
-            bindings = <
- &kp GRAVE        &kp F1    &kp F2         &kp F3     &kp F4      &kp F5                       &kp F6     &kp F7    &kp F8    &kp F9       &kp F10  &kp F11
-     &none  &kp NUMBER_1    &kp N2         &kp N3     &kp N4      &kp N5                       &kp N6     &kp N7    &kp N8    &kp N9        &kp N0  &kp F12
-     &none     &kp COLON  &kp PIPE  &kp AMPERSAND  &kp TILDE       &none                        &none   &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT    &none
-     &none         &none     &none          &none      &none  &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
-                             &none          &none                                                                    &none     &none
-                                                       &none       &none                        &none      &none
-                                                                   &none   &none   &none        &none
-                                                                   &none   &none   &none  &bootloader
-            >;
-        };
-
-        DOUBLE {
-            bindings = <
- &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &none   &none   &none                              &none      &none   &none   &none   &none   &none
-   &bt BT_NXT         &none         &none   &none   &none   &none                  &kp DOUBLE_QUOTES   &kp APOS   &none   &none   &none   &none
-   &bt BT_PRV         &none         &none   &none   &none   &none                          &kp EQUAL  &kp COLON   &none   &none   &none   &none
-   &bt BT_CLR         &none         &none   &none   &none   &none                          &kp TILDE  &kp QMARK   &none   &none   &none   &none
-                                    &none   &none                                                                 &none   &none
-                                                    &none  &tog 4                              &none      &none
-                                                            &none   &none   &none              &none
-                                                            &none   &none   &none              &none
-            >;
-        };
-
-        QUICK {
+        quick {
             bindings = <
       &qk F1 ESC         &qk F2 N1       &qk F3 N2       &qk F4 N3       &qk F5 N4      &qk F6 N5                                &qk F7 N6          &qk F8 N7            &qk F9 N8            &qk F10 N9           &qk F11 N0    &qk F12 PRINTSCREEN
  &qk TILDE GRAVE        &qk EXCL Q        &qk AT W      &qk HASH E    &qk DOLLAR R  &qk PERCENT T                              &qk CARET Y    &qk AMPERSAND U       &qk ASTERISK I           &qk MINUS O           &qk PLUS P               &sk BSLH
          &kp TAB  &qk LEFT_SHIFT A  &qk LEFT_GUI S  &qk LEFT_ALT D     &qk LCTRL F     &qk PLUS G                               &qk LPAR H         &qk RPAR J   &qk LEFT_BRACKET K   &qk RIGHT_BRACKET L  &qk COLON SEMICOLON  &qk DOUBLE_QUOTES SQT
        &sk LCTRL  &qk LEFT_SHIFT Z  &qk LEFT_GUI X  &qk LEFT_ALT C     &qk LCTRL V    &qk MINUS B                         &qk LEFT_BRACE N  &qk RIGHT_BRACE M  &qk LESS_THAN COMMA  &qk GREATER_THAN DOT   &qk QUESTION SLASH         &qk PIPE UNDER
                                       &sk LEFT_GUI       &sk LCTRL                                                                                                       &sk RCTRL       &kp RIGHT_SHIFT
-                                                                    &sk LEFT_SHIFT      &kp SPACE                                &kp ENTER    &lt 5 BACKSPACE
+                                                                    &sk LEFT_SHIFT      &kp SPACE                                &kp ENTER    &lt LOWER BACKSPACE
                                                                                             &none   &none  &kp BACKSPACE             &none
-                                                                                           &tog 4   &none          &none             &none
+                                                                                           &tog QUICK   &none          &none             &none
+            >;
+        };
+        lower {
+
+            bindings = <
+ &kp GRAVE        &kp F1    &kp F2         &kp F3     &kp F4      &kp F5                       &kp F6     &kp F7    &kp F8    &kp F9       &kp F10  &kp F11
+     &none  &kp NUMBER_1    &kp N2         &kp N3     &kp N4      &kp N5                       &kp N6     &kp N7    &kp N8    &kp N9        &kp N0  &kp F12
+     &none     &kp COLON  &kp PIPE  &kp AMPERSAND  &kp TILDE       &none                        &none   &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT    &none
+     &none     &none     &none          &none      &none  &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
+                             &none          &none                                                                    &none     &none
+                                                       &none       &none                        &none      &none
+                                                                   &none   &none   &none        &none
+                                                                   &none   &none   &none  &bootloader
+            >;
+        };
+        
+        double {
+            bindings = <
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &none   &none   &none                              &none      &none   &none   &none   &none   &none
+   &bt BT_NXT         &none         &none   &none   &none   &none                  &kp DOUBLE_QUOTES   &kp APOS   &none   &none   &none   &none
+   &bt BT_PRV         &none         &none   &none   &none   &none                          &kp EQUAL  &kp COLON   &none   &none   &none   &none
+   &bt BT_CLR         &none         &none   &none   &none   &none                          &kp TILDE  &kp QMARK   &none   &none   &none   &none
+                                    &none   &none                                                                 &none   &none
+                                                    &none   &none                              &none      &none
+                                                            &none   &none   &none              &none
+                                                            &none   &none   &none              &none
             >;
         };
 
-        quick_fn {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &trans        &trans           &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &trans        &trans           &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &trans        &trans           &trans  &trans
-                 &trans  &trans                                                                  &trans        &trans
-                                 &trans  &trans                  &trans          &trans
-                                         &trans  &trans  &trans  &trans
-                                         &trans  &trans  &trans  &trans
-            >;
-        };
+        
+
+ 
     };
 };
