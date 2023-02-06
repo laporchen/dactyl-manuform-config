@@ -43,32 +43,31 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
             bindings = <
    &kp ESC  &kp N1        &kp N2     &kp N3  &kp N4        &kp N5                                         &kp N6           &kp N7     &kp N8           &kp N9         &kp N0  &kp PRINTSCREEN
       &td0   &kp Q         &kp W      &kp E   &kp R         &kp T                                          &kp Y            &kp U      &kp I            &kp O          &kp P         &kp BSLH
    &kp TAB   &kp A         &kp S      &kp D   &kp F         &kp G                                          &kp H            &kp J      &kp K            &kp L  &kp SEMICOLON          &kp SQT
  &kp LCTRL   &kp Z         &kp X      &kp C   &kp V         &kp B                                          &kp N            &kp M  &kp COMMA          &kp DOT       &kp FSLH        &kp MINUS
                     &sk LEFT_GUI  &sk LCTRL                                                                                        &sk RCTRL  &kp RIGHT_SHIFT
-                                              &mo 1     &kp SPACE                                      &kp ENTER  &lt 2 BACKSPACE
+                                              &mo 1     &kp SPACE                                      &kp ENTER  &lt 3 BACKSPACE
                                                      &sk LEFT_ALT          &sk LSHIFT       &kp BSPC   &kp PG_UP
                                                      &kp LEFT_GUI  &kp LA(LEFT_SHIFT)  &kp PAGE_DOWN  &kp DELETE
             >;
         };
 
         raise {
-
             bindings = <
      &kp GRAVE        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                             &kp F6           &kp F7            &kp F8             &kp F9       &kp F10            &kp F11
      &kp TILDE      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                          &kp CARET    &kp AMPERSAND      &kp ASTERISK          &kp MINUS      &kp PLUS            &kp F12
  &kp BACKSPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                           &kp LPAR         &kp RPAR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &kp DOUBLE_QUOTES
-         &tog QUICK  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION          &kp UNDER
+        &tog 2  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                     &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LESS_THAN   &kp GREATER_THAN  &kp QUESTION          &kp UNDER
                                     &trans        &trans                                                                                          &kp PIPE          &kp COLON
-                                                                 &none         &none                          &kp EQUAL            &mo DOUBLE
+                                                                 &none         &none                          &kp EQUAL            &mo 4
                                                                                &none   &none  &kp TILDE       &kp UNDER
                                                                          &bootloader   &none   &kp PIPE       &kp TILDE
             >;
         };
+
         quick {
             bindings = <
       &qk F1 ESC         &qk F2 N1       &qk F3 N2       &qk F4 N3       &qk F5 N4      &qk F6 N5                                &qk F7 N6          &qk F8 N7            &qk F9 N8            &qk F10 N9           &qk F11 N0    &qk F12 PRINTSCREEN
@@ -76,25 +75,25 @@
          &kp TAB  &qk LEFT_SHIFT A  &qk LEFT_GUI S  &qk LEFT_ALT D     &qk LCTRL F     &qk PLUS G                               &qk LPAR H         &qk RPAR J   &qk LEFT_BRACKET K   &qk RIGHT_BRACKET L  &qk COLON SEMICOLON  &qk DOUBLE_QUOTES SQT
        &sk LCTRL  &qk LEFT_SHIFT Z  &qk LEFT_GUI X  &qk LEFT_ALT C     &qk LCTRL V    &qk MINUS B                         &qk LEFT_BRACE N  &qk RIGHT_BRACE M  &qk LESS_THAN COMMA  &qk GREATER_THAN DOT   &qk QUESTION SLASH         &qk PIPE UNDER
                                       &sk LEFT_GUI       &sk LCTRL                                                                                                       &sk RCTRL       &kp RIGHT_SHIFT
-                                                                    &sk LEFT_SHIFT      &kp SPACE                                &kp ENTER    &lt LOWER BACKSPACE
+                                                                    &sk LEFT_SHIFT      &kp SPACE                                &kp ENTER    &lt 3 BACKSPACE
                                                                                             &none   &none  &kp BACKSPACE             &none
-                                                                                           &tog QUICK   &none          &none             &none
+                                                                                           &tog 2   &none          &none             &none
             >;
         };
-        lower {
 
+        lower {
             bindings = <
  &kp GRAVE        &kp F1    &kp F2         &kp F3     &kp F4      &kp F5                       &kp F6     &kp F7    &kp F8    &kp F9       &kp F10  &kp F11
      &none  &kp NUMBER_1    &kp N2         &kp N3     &kp N4      &kp N5                       &kp N6     &kp N7    &kp N8    &kp N9        &kp N0  &kp F12
      &none     &kp COLON  &kp PIPE  &kp AMPERSAND  &kp TILDE       &none                        &none   &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT    &none
-     &none     &none     &none          &none      &none  &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
+     &none         &none     &none          &none      &none  &kp C_MUTE                        &none  &kp EQUAL  &kp PLUS  &kp PIPE  &kp QUESTION    &none
                              &none          &none                                                                    &none     &none
                                                        &none       &none                        &none      &none
                                                                    &none   &none   &none        &none
                                                                    &none   &none   &none  &bootloader
             >;
         };
-        
+
         double {
             bindings = <
  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &none   &none   &none                              &none      &none   &none   &none   &none   &none
@@ -107,9 +106,5 @@
                                                             &none   &none   &none              &none
             >;
         };
-
-        
-
- 
     };
 };
