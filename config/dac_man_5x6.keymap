@@ -109,14 +109,14 @@
 
         FORTY1 {
             bindings = <
-    &none  &none  &none         &none  &none                 &none                     &none            &none         &none    &none          &none      &none
-  &kp ESC  &kp Q  &kp W         &kp E  &kp R                 &kp T                     &kp Y            &kp U         &kp I    &kp O          &kp P   &kp BSLH
-  &kp TAB  &kp A  &kp S         &kp D  &kp F                 &kp G                     &kp H            &kp J         &kp K    &kp L  &kp SEMICOLON    &kp SQT
-&kp LCTRL  &kp Z  &kp X         &kp C  &kp V                 &kp B                     &kp N            &kp M     &kp COMMA  &kp DOT       &kp FSLH  &kp MINUS
-                  &none  &kp LEFT_ALT                                                                          &kp LEFT_GUI    &none
-                                       &mo 6  &mt LEFT_SHIFT SPACE                 &kp ENTER  &lt 7 BACKSPACE
-                                                             &none   &none  &none      &none
-                                                             &none  &tog 5  &none      &none
+   &none  &none  &none      &none  &none                 &none                     &none            &none         &none    &none          &none      &none
+ &kp ESC  &kp Q  &kp W      &kp E  &kp R                 &kp T                     &kp Y            &kp U         &kp I    &kp O          &kp P   &kp BSLH
+ &kp TAB  &kp A  &kp S      &kp D  &kp F                 &kp G                     &kp H            &kp J         &kp K    &kp L  &kp SEMICOLON    &kp SQT
+&sk LALT  &kp Z  &kp X      &kp C  &kp V                 &kp B                     &kp N            &kp M     &kp COMMA  &kp DOT       &kp FSLH  &kp MINUS
+                 &none  &sk LCTRL                                                                          &sk LEFT_GUI    &none
+                                   &mo 6  &mt LEFT_SHIFT SPACE                 &kp ENTER  &lt 7 BACKSPACE
+                                                         &none   &none  &none      &none
+                                                         &none  &tog 5  &none      &none
             >;
         };
 
