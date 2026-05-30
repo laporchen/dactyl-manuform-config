@@ -93,12 +93,12 @@
 
         FFXIV_KB_ONLY {
             bindings = <
-&kp ESCAPE      &kp NUMBER_1  &kp N2     &kp N3     &kp N4        &kp N5                     &kp N6            &kp N7            &kp N8            &kp N9            &kp N0      &none
-&kp GRAVE       &kp Q         &kp W      &kp E      &kp R         &kp T                      &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &none
-&kp TAB         &kp A         &kp S      &kp D      &kp F         &kp G                      &kp LC(N1)        &kp LC(N2)        &kp LC(N3)        &kp LC(N4)        &kp LC(N5)  &none
-&kp LEFT_SHIFT  &kp Z         &kp X      &kp C      &kp V         &kp B                      &kp HOME          &kp END           &kp COMMA         &kp DOT           &kp FSLH    &kp RIGHT_SHIFT
-                              &kp LC(E)  &kp LA(C)                                                                               &kp C             &trans
-                                                    &kp LEFT_ALT  &kp SPACE                  &trans            &mo 5
+&kp ESCAPE        &kp ESCAPE  &kp N1     &kp N2     &kp N3        &kp N4                     &kp N5            &kp NUMBER_6      &kp N8            &kp N9            &kp N0      &kp I
+&kp GRAVE         &kp GRAVE   &kp Q      &kp W      &kp E         &kp R                      &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp PG_UP
+&kp LEFT_CONTROL  &kp TAB     &kp A      &kp S      &kp D         &kp F                      &kp LC(N1)        &kp LC(N2)        &kp LC(N3)        &kp LC(N4)        &kp LC(N5)  &kp PG_DN
+&kp LEFT_SHIFT    &kp LSHFT   &kp Z      &kp X      &kp C         &kp V                      &kp HOME          &kp END           &kp COMMA         &kp DOT           &kp FSLH    &kp RIGHT_SHIFT
+                              &kp LC(E)  &kp LA(C)                                                                               &trans            &trans
+                                                    &kp LEFT_ALT  &kp SPACE                  &kp RIGHT_ALT     &mo 5
                                                                   &trans     &trans  &trans  &trans
                                                                   &trans     &to 0   &trans  &trans
             >;
@@ -106,11 +106,11 @@
 
         NUMPAD {
             bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &kp KP_NUMLOCK
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &kp KP_NUMBER_0  &trans           &trans  &trans
-                &trans  &trans                                                           &trans           &trans
+                &trans  &trans                                                           &kp KP_NUMBER_0  &trans
                                 &trans  &trans                  &trans  &trans
                                         &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans  &trans
